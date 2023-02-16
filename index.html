@@ -21,21 +21,25 @@
 </head>
 
 <body>
+    <!-- hamburger menu start -->
     <div class="hamburger-menu">
         <input id="menu__toggle" type="checkbox" />
         <label class="menu__btn" for="menu__toggle">
-          <span></span>
+            <span></span>
         </label>
-    
+
         <ul class="menu__box">
-          <li><a class="menu__item" href="#">Home</a></li>
-          <li><a class="menu__item" href="#">About Us</a></li>
-          <li><a class="menu__item" href="#">Our Interests</a></li>
-          <li><a class="menu__item" href="#">Values</a></li>
-          <li><a class="menu__item" href="#">Current Projectsr</a></li>
-          <li><a class="menu__item" href="#" class="sign">Sign Up</a></li>
+            <li><a class="menu__item" href="#">Home</a></li>
+            <li><a class="menu__item" href="#">About Us</a></li>
+            <li><a class="menu__item" href="#">Our Interests</a></li>
+            <li><a class="menu__item" href="#">Values</a></li>
+            <li><a class="menu__item" href="#">Current Projectsr</a></li>
+            <li><a class="menu__item" href="#" class="sign">Sign Up</a></li>
         </ul>
-      </div>
+    </div>
+    <!-- hamburger menu finish -->
+
+    <!-- header start -->
     <header>
         <div class="logo">
             <img src="img/logo.png" alt="Excursy Logo">
@@ -67,6 +71,77 @@
         </div>
     </div>
     <!-- main finish -->
+
+    <!-- company start -->
+    <div class="company">
+        <ul>
+            <li><img src="img/marka1.png" alt=""></li>
+            <li><img src="img/marka2.png" alt=""></li>
+            <li><img src="img/marka3.png" alt=""></li>
+            <li><img src="img/marka4.png" alt=""></li>
+        </ul>
+    </div>
+    <!-- company finish -->
+
+
+    <!-- about us start -->
+    <div class="about-us">
+        <div class="about-img">
+            <img src="img/About-Us-Illustration.png" alt="">
+        </div>
+        <div class="about-text">
+            <h2>About Us</h2>
+            <p>We generated names based on a multitude of factors and picked the one that resonated with us the most.
+                Our founder first engaged with the blockchain in 2013</p>
+            <div class="jscounter">
+                <div class="counter-container">
+                    <h4>Project Done</h4>
+                    <div class="counter" data-target="600"></div>
+                </div>
+
+                <div class="counter-container">
+                    <h4>Happy Clients</h4>
+                    <div class="counter" data-target="950"></div>
+                </div>
+
+                <div class="counter-container">
+                    <h4>Employee</h4>
+                    <div class="counter" data-target="30"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- about us finish -->
+
+
+    <script>
+
+        //   jscounter
+
+        const counters = document.querySelectorAll('.counter')
+
+        counters.forEach(counter => {
+            counter.innerText = '0'
+
+            const updateCounter = () => {
+                const target = +counter.getAttribute('data-target')
+                const c = +counter.innerText
+
+                const increment = target / 25
+
+                if (c < target) {
+                    counter.innerText = `${Math.ceil(c + increment)}`
+                    setTimeout(updateCounter, 90)
+                } else {
+                    counter.innerText = target + " " + "+"
+                }
+            }
+
+            updateCounter()
+        })
+
+    </script>
 </body>
 
 </html>
