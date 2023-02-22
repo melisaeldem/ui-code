@@ -297,8 +297,65 @@ header .links .sign {
 }
 /* our values finish */
 
+/* current projects start */
+.projects{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    top: 700px;
+    gap: 2rem;
+}
+.projects img{
+    width: 350px;
+    gap: 2rem;
+}
+.projects p{
+    width: 300px;
+}
+.project3 img{
+    position: relative;
+    bottom: 13.5px;
+} 
+.projects h3{
+    font-weight: 500;
+}
+.projects span{
+    color: #FF6600;
+    margin-left: 10px;
+    font-weight: 600;
+}
+/* current projects finish */
 
-
+/* fotter start */
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    top: 860px;
+    flex-direction: column;
+}
+.footer .logo span{
+    font-size: 30px;
+    position: relative;
+    bottom: 20px;
+    margin-left: 10px;
+}
+.footer .logo img{
+    width: 70px;
+}
+.footer-link ul{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+.footer-link ul a{
+    color: #2B2B2B;
+}
+/* fotter finish */
 
 @media screen and (max-width:1190px) {
     header .logo img {
@@ -370,6 +427,36 @@ header .links .sign {
         letter-spacing: 1px;
         font-size: 19px;
     }
+    .projects{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: relative;
+        top: 700px;
+        gap: 2rem;
+    }
+    .projects img{
+        width: 340px;
+        gap: 2rem;
+    }
+    .projects p{
+        width: 300px;
+        font-size: 14px;
+    }
+    .project3 img{
+        position: relative;
+        bottom: 13.5px;
+    } 
+    .projects h3{
+        font-weight: 500;
+        font-size: 18px;
+    }
+    .projects span{
+        color: #FF6600;
+        margin-left: 10px;
+        font-weight: 600;
+    }
 
 }
 
@@ -430,6 +517,15 @@ header .links .sign {
     }
     .our-text h2{
         font-size: 32px;
+    }
+    .projects1 {
+        padding-top: 40px;
+    }
+    .projects2 {
+        padding-top: 40px;
+    }
+    .projects3 {
+        padding-top: 40px;
     }
     
 }
@@ -661,6 +757,10 @@ header .links .sign {
     .our-text h2{
         font-size: 24px;
     }
+    .footer-link ul{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width:500px) {
@@ -682,5 +782,13 @@ header .links .sign {
     .our-values{
         position: relative;
         top: 330px;
+    }
+    .projects{
+        position: relative;
+        top: 420px;
+    }
+    .footer{
+        position: relative;
+        top: 360px;
     }
 }
